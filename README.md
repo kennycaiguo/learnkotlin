@@ -32,3 +32,21 @@ fun anySum(vararg nums:Int):Int{ //kotlin中可变参数用vararg来声明
     }
     return sum
 }
+# kotlin中使用lambda表达式
+## 实例1
+fun main(args: Array<String>) {
+    val sumLambda: (Int, Int) -> Int = {x,y -> x+y}
+    println(sumLambda(1,2))  // 输出 3
+}
+
+##   实例2
+fun main(args:Array<String>){
+    println(lambdaAdd(10,20))
+    
+}
+
+fun lambdaAdd(a:Int,b:Int):Int{
+    val add:(Int,Int)->Int={x,y->x+y} //lambda表达式的使用
+    return add(a,b)
+}
+    

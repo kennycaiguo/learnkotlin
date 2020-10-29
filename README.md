@@ -17,3 +17,18 @@ fun main(args:Array<String>){
 fun add(x:Int,y:Int):Int{
     return x + y
 }
+
+# kotlin中使用可变参数
+fun main(args:Array<String>){
+    println("a+...=${anySum(11,22,33,44)}")//注意在kotlin中，println函数只有一个参数，所以要使用字符串模板
+}
+
+ 
+
+fun anySum(vararg nums:Int):Int{ //kotlin中可变参数用vararg来声明
+    var sum:Int =0;
+    for(num in nums){
+        sum+=num
+    }
+    return sum
+}
